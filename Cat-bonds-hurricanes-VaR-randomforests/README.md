@@ -3,6 +3,7 @@
 This repository contains the complete academic project **`catbonds_1.ipynb`**, developed as part of a second-level Master's in Data Science and Statistical Learning at Università degli Studi di Firenze | IMT Lucca.  
 The analysis replicates a simplified, yet robust, framework for estimating **Value at Risk (VaR)** and **Expected Shortfall (ES)** for a **CAT bond** linked to North Atlantic hurricane risk.
 
+![Hurricane Genesis Map_With_Predictions](images/map4.png)
 ---
 
 ## Project Goals

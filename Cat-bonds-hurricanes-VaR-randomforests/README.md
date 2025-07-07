@@ -85,6 +85,7 @@ pip freeze > requirements.txt
 ## Credits
 
 Developed by **Francesco Mosti** as part of the **Master in Data Science and Statistical Learning**, University of Florence and IMT Lucca.
+francesco.mosti@yahoo.com
 
 ---
 

@@ -7,8 +7,8 @@ The analysis replicates a simplified, yet robust, framework for estimating **Val
 
 ## Project Goals
 
-- Merge and clean historical hurricane data from multiple open sources (HURDAT2, EM-DAT, Kaggle).
-- Engineer meaningful predictors (`MSLP``, `ACE`, `coordinates`).
+- Merge and clean historical hurricane data from multiple open sources ([HURDAT2](https://www.nhc.noaa.gov/data/#hurdat), [EM-DAT](https://www.emdat.be), [Kaggle](https://www.kaggle.com/datasets/valery2042/hurricanes/data).
+- Engineer meaningful predictors (`MSLP`, `ACE`, `coordinates`).
 - Train a **Random Forest Classifier** to estimate the `conditional probability of catastrophic loss given storm features.
 - Generate hurricane scenarios using two approaches:
   - **Bootstrapping with jitter**

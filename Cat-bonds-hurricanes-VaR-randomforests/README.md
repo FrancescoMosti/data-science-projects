@@ -21,7 +21,7 @@ The analysis replicates a simplified, yet robust, framework for estimating **Val
 
 ```
 ├── catbonds_1.ipynb     # Main Jupyter notebook with full workflow
-├── catbonds_1.html      # html used to present the results
+├── presentation.html    # html used to present the results
 ├── data/                # (Optional) Raw data sources
 ├── requirements.txt     # Python packages to be installed
 ├── README.md            # Project description and instructions

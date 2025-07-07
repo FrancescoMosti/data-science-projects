@@ -21,12 +21,12 @@ The analysis replicates a simplified, yet robust, framework for estimating **Val
 ## Repository Structure
 
 ```
-├── catbonds_1.ipynb     # Main Jupyter notebook with full workflow
-├── presentation.html    # html used to present the results
 ├── data/                # Raw data sources
 ├── images/              # Collection of visual resutls
-├── requirements.txt     # Python packages to be installed
 ├── README.md            # Project description and instructions
+├── catbonds_1.ipynb     # Main Jupyter notebook with full workflow
+├── presentation.html    # html used to present the results
+├── requirements.txt     # Python packages to be installed
 ```
 
 ---

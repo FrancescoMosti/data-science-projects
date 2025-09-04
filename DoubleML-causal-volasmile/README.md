@@ -5,7 +5,7 @@ This repository contains the complete academic project **`volatility-smile-dml.i
 The analysis replicates a simplified, yet robust, framework for the estimation of the empirical effect of liquidity (measured by the bid-ask spread) on **Implied Volatility** in the `NASDAQ (QQQ)` option market, using the recently developed Double Machine learning technique proposed by [Chernozhukov et.al. (2018)](https://academic.oup.com/ectj/article/21/1/C1/5056401).\
 The structure of the analysis follows the work by [Li, Lin, Yu, Liu (2025)](https://www.sciencedirect.com/science/article/abs/pii/S0927538X24003974?utm_source=chatgpt.com) focused instead on the newly established Chinese CSI 300 options index.
 
-![Hurricane Genesis Map_With_Predictions](images/vsmile.png)
+![Volatility Smile Structure](images/vsmile.png)
 ---
 
 ## Project Goals

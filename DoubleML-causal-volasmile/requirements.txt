@@ -1,0 +1,9 @@
+numpy
+pandas
+datetime
+yfinance
+matplotlib
+statsmodels
+pandas_datareader
+sklearn
+xgboost

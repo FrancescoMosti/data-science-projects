@@ -10,7 +10,9 @@ This repository will be regularly updated with new projects.
 Current projects include:
 
 - **DoubleML-causal-volasmile**: A Causal Inference analysis using the growingly literature on Double Machine Learning to estimate the causal effect of liquidity costs (bid-ask spread) on implied volatility, in the NASDAQ options market.
+  
 - **Cat-bonds-hurricanes-VaR-randomforests**: A Random Forest Classifier used to predict Catastrophic Hurricane events in the North Atlantic Basin. The predictor is used in a set of Monte Carlo simulated scenarios to predict the VaR for a fictious portfolio of Cat Bonds on the dataset.
+  
 - **California_Housing**: A simple pipeline implementing linear regression with the `scikit-learn` package in Python.
 
 

@@ -169,11 +169,6 @@ summary(ols_base)
 
 lm.morantest(ols_base, lw_w)
 
-# Senza covariate, la densità dei vivai è correlata tra vicini 
-# (valore positivo di Moran I), ed in maniera molto significativa.
-# Questo indica che sembra esserci una forte struttura spaziale da correggere 
-# con un modello Spatial Lag o Error.
-
 ## Aggiungo covariate
 
 # 1. Altitudine: https://www.istat.it/classificazione/principali-statistiche-geografiche-sui-comuni/ 
@@ -274,14 +269,6 @@ sarma_model <- sacsarlm(
 )
 summary(sarma_model)
 
-# Effetti significativi: densità popolazione e turismo, perché rimangono robusti 
-# anche nei modelli spaziali.
-# Altitudine: puoi menzionarla come covariata “inizialmente significativa”, ma che 
-# perde importanza quando consideri la dipendenza spaziale.
-# Autocorrelazione spaziale: fondamentale sottolineare che un modello OLS tradizionale 
-# sottostimerebbe gli errori, perché non tiene conto dei vicini. SAR/SEM corregge 
-# questo e cambia le stime dei coefficienti.
-
 #-------------------------
 # 8. Aggiungo Qualità dell'Aria - Carico dati PM10 e kriging
 #-------------------------
@@ -331,28 +318,3 @@ dev.new()
 tm_shape(toscana) +
   tm_polygons("PM10_idw", palette = "YlOrRd", title = "PM10 stimato") +
   tm_bubbles("dens_viv", col = "blue", scale = 1, title.size = "Densità vivai")
-
-# SAR spaziale
-# sar_pm10 <- lagsarlm(PM10_idw ~ dens_viv + pop_dens + tur_dens + alt_mean, data = toscana, listw = lw_w, zero.policy = TRUE)
-sar_pm10 <- lagsarlm(PM10_idw ~ dens_viv + pop_dens, data = toscana, listw = lw_w, zero.policy = TRUE)
-summary(sar_pm10)
-
-sem_pm10 <- errorsarlm(PM10_idw ~ dens_viv + pop_dens, data = toscana, listw = lw_w, zero.policy = TRUE)
-summary(sem_pm10)
-
-# Effetto della densità vivai (dens) sul PM10 stimato con IDW:
-#   Il coefficiente è 0.0908, ma il p-value = 0.5317, quindi non significativo.
-# In altre parole, secondo questo modello spaziale, la densità dei vivai non sembra 
-# avere alcun effetto rilevante sui valori di PM10 stimati tramite IDW.
-# Effetto spaziale (Rho = 0.9198):
-#   Il parametro di lag spaziale è molto alto e altamente significativo, con p-value 
-# praticamente zero.
-# Questo significa che i valori di PM10 sono fortemente autocorrelati spazialmente: 
-#   i comuni confinanti hanno valori simili, indipendentemente dalla densità dei vivai.
-# Conclusione pratica:
-#   Anche se inserisci dens nel modello, non contribuisce a spiegare PM10: 
-#   l’autocorrelazione spaziale domina completamente la variabilità.
-# Quindi non ha senso includere la densità dei vivai come covariata predittiva per 
-# PM10 in questa analisi. Puoi comunque riportare l’analisi per completezza, ma 
-# evidenzia che non è significativa.
-
